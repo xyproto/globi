@@ -1,4 +1,4 @@
-# GlobI
+# Globi
 
 Case insensitive file globbing.
 
