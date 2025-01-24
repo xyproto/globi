@@ -16,16 +16,9 @@ func Glob(pattern string) ([]string, error) {
 
 	matches := make([]string, 0, len(entries))
 
-	if base == "*" || base == "**" {
-		for _, e := range entries {
-			matches = append(matches, filepath.Join(dir, e.Name()))
-		}
-		return matches, nil
-	}
-
 	if !strings.Contains(base, "*") {
 		for _, e := range entries {
-			if strings.EqualFold(base, e.Name()) {
+			if strings.EqualFold(e.Name(), base) {
 				matches = append(matches, filepath.Join(dir, e.Name()))
 			}
 		}

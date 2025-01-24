@@ -8,4 +8,5 @@ import "github.com/xyproto/globi"
 results, err := globi.Glob(pattern)
 ```
 
-License: BSD-3
+* Version: 1.0.1
+* License: BSD-3
